@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Coralin</string>
+    <string name="title_activity_login">Iniciar Sesión</string>
+    <string name="title_activity_age_verification">Verifica Tu Edad</string>
+    <string name="title_activity_tutorial">Tutorial De Uso</string>
+    <string name="title_activity_main_screen">Pantalla Principal</string>
 </resources>
