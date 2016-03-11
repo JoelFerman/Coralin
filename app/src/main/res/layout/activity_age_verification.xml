@@ -7,18 +7,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="coral.co.coralin.LoadingActivity">
+    tools:context="coral.co.coralin.AgeVerificationActivity">
 
     <Button
-        android:id="@+id/btnContinue"
+        android:id="@+id/btnValidateAge"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:background="@color/colorAccent"
-        android:text="CONTINUAR"
+        android:text="VALIDAR"
         android:textColor="@color/colorWhite"
         android:textSize="18dp"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
-    
+        android:textStyle="bold" />
+
 </RelativeLayout>
