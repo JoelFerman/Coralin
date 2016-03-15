@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorLoginScreenBackground"
+    android:background="@drawable/ic_app_background"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -14,8 +14,8 @@
     <RelativeLayout
         android:id="@+id/layoutUserLogin"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/dividerHorizontal"
         android:background="@drawable/layer_card_background"
         android:gravity="center_horizontal"
         android:paddingBottom="@dimen/activity_vertical_margin"
@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/txtPassword"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
             android:hint="Correo Electrónico" />
 
         <EditText
@@ -36,72 +37,68 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginTop="15dp"
             android:hint="Contraseña"
             android:password="true" />
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="130dp"
+            android:layout_width="105dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/txtPassword"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/button_shape_no_fill"
             android:text="ENTRAR"
             android:textColor="@color/colorAccent"
             android:textSize="16dp"
             android:textStyle="bold" />
 
-        <!--<Button-->
-        <!--android:id="@+id/btnLogin"-->
-        <!--android:layout_width="120dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_below="@+id/txtPassword"-->
-        <!--android:layout_marginTop="20dp"-->
-        <!--android:background="@color/colorAccent"-->
-        <!--android:text="ENTRAR"-->
-        <!--android:textColor="@color/colorWhite"-->
-        <!--android:textSize="18dp"-->
-        <!--android:textStyle="bold" />-->
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnFBLogin"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layoutUserLogin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:background="@color/colorAccent"
-        android:text="Registrate con Facebook"
-        android:textColor="@color/colorWhite"
-        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/dividerHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true" />
 
-    <Button
-        android:id="@+id/btnEmailRegister"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnFBLogin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/button_shape_no_fill"
-        android:text="Registrarse con Correo"
-        android:textColor="@color/colorBlack"
-        android:textSize="16dp" />
+    <RelativeLayout
+        android:id="@+id/layoutLoginButtons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dividerHorizontal">
 
-    <Button
-        android:id="@+id/btnGuestRegister"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnEmailRegister"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/button_shape_no_fill"
-        android:text="Registrate como Invitado"
-        android:textColor="@color/colorBlack"
-        android:textSize="16dp" />
+        <Button
+            android:id="@+id/btnFBLogin"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnEmailRegister"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:text="Registrate con Facebook"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btnEmailRegister"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_shape_no_fill"
+            android:text="Registrarse con Correo"
+            android:textColor="@color/colorBlack" />
+
+        <Button
+            android:id="@+id/btnGuestRegister"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnEmailRegister"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape_no_fill"
+            android:text="Registrate como Invitado"
+            android:textColor="@color/colorBlack" />
+
+    </RelativeLayout>
 
     <!-- added to make commit to master-->
 

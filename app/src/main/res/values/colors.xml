@@ -5,6 +5,7 @@
     <color name="colorAccent">#0D47A1</color>
 
     <!-- OTHER COLORS -->
+    <color name="colorScreenBackground">#FFECB3</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorCardShadow">#BDBDBD</color>
