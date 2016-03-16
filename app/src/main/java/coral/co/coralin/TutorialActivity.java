@@ -10,7 +10,7 @@ import android.widget.Toolbar;
 
 public class TutorialActivity extends AppCompatActivity implements OnClickListener
 {
-    GlobalVars GV = new GlobalVars();
+//    GlobalVars GV = new GlobalVars();
 
     Button btnAdvance;
 

@@ -20,6 +20,9 @@ public class LoadingActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
 
+//        SharedPreferences sharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
+//        String age = sharedPreferences.getString("Age", "");
+
         btnContinue = (Button) findViewById(R.id.btnContinue);
 
         btnContinue.setOnClickListener(this);
@@ -32,24 +35,24 @@ public class LoadingActivity extends AppCompatActivity implements View.OnClickLi
         {
             case R.id.btnContinue:
 
-                if (GV.tutorialView == 0)
-                {
-                    Intent goTutorial = new Intent(this, TutorialActivity.class);
+//                if (GV.tutorialView == 0)
+//                {
+                    Intent goTutorial = new Intent(this, AgeVerificationActivity.class);
                     finish();
                     startActivity(goTutorial);
-                }
-                else if (GV.tutorialView == 1)
-                {
-                    Intent goAgeVerification = new Intent(this, AgeVerificationActivity.class);
-                    finish();
-                    startActivity(goAgeVerification);
-                }
-                else if (GV.tutorialView == 2)
-                {
-                    Intent goLogin = new Intent(this, LoginActivity.class);
-                    finish();
-                    startActivity(goLogin);
-                }
+//                }
+//                else if (GV.tutorialView == 1)
+//                {
+//                    Intent goAgeVerification = new Intent(this, AgeVerificationActivity.class);
+//                    finish();
+//                    startActivity(goAgeVerification);
+//                }
+//                else if (GV.tutorialView == 2)
+//                {
+//                    Intent goLogin = new Intent(this, LoginActivity.class);
+//                    finish();
+//                    startActivity(goLogin);
+//                }
                 break;
         }
     }

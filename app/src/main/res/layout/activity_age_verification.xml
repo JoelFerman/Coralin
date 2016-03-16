@@ -10,49 +10,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="coral.co.coralin.AgeVerificationActivity">
 
-    <Button
-        android:id="@+id/btnValidateAge"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/colorAccent"
-        android:text="VALIDAR"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:background="@drawable/layer_card_background"
-        android:layout_centerInParent="true">
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="260dp"-->
+    <!--android:layout_centerInParent="true">-->
 
         <TextView
+            android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtTitle"
+            android:layout_above="@+id/dividerHorizontalAge"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
             android:text="¿Que edad tienes?"
-            android:textStyle="bold"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="50dp"
-            android:textSize="35dp"/>
+            android:textSize="35dp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/dividerHorizontalAge"
             android:layout_width="match_parent"
             android:layout_height="4dp"
-            android:id="@+id/dividerHorizontalAge"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true" />
 
         <EditText
             android:id="@+id/txtAgeValidation"
-            android:layout_width="300dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/dividerHorizontalAge"
-            android:layout_marginTop="20dp"
-            android:hint="Edad" />
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:hint="Edad"
+            android:onClick="save"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/btnValidateAge"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtAgeValidation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorAccent"
+            android:text="VALIDAR"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        <!--</RelativeLayout>-->
 
 </RelativeLayout>
