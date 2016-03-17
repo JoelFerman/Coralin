@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#FF8F00</color>
     <color name="colorAccent">#0D47A1</color>
 
+    <!-- TRANSPARENT COLORS -->
+    <color name="colorLayoutTransparent">#55000000</color>
+    <color name="colorWhiteTransparent">#37FFFFFF</color>
+
     <!-- OTHER COLORS -->
     <color name="colorScreenBackground">#FFECB3</color>
     <color name="colorWhite">#FFFFFF</color>
