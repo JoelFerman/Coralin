@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">Coralin</string>
-    <string name="title_activity_login">Iniciar Sesión</string>
-    <string name="title_activity_age_verification">Verifica Tu Edad</string>
-    <string name="title_activity_tutorial">Tutorial De Uso</string>
-    <string name="title_activity_main_screen">Pantalla Principal</string>
+    <string name="title_activity_login">Iniciar sesión</string>
+    <string name="title_activity_loading">Coralin</string>
+    <string name="title_activity_age_verification">Verifica tu edad</string>
+    <string name="title_activity_tutorial">Tutorial de uso</string>
+    <string name="title_activity_main_screen">Pantalla principal</string>
+
+    <!-- SLIDER VIEW STRINGS-->
+    <string name="sv_username">Username</string>
+    <string name="sv_email">username@mail.com</string>
+    <string name="title_activity_notifications">NotificationsActivity</string>
+
+    <string name="pre_login">La lógica de programación aún más fácil para niños en edad escolar primaria.</string>
+    <string name="pre_login_text">¿Ya estas inscrito?</string>
+
 </resources>
