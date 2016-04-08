@@ -7,12 +7,16 @@
     <!-- TRANSPARENT COLORS -->
     <color name="colorLayoutTransparent">#55000000</color>
     <color name="colorWhiteTransparent">#37FFFFFF</color>
+    <color name="colorBlackTransparent">#37000000</color>
 
     <!-- OTHER COLORS -->
+    <color name="colorCard">#EEE</color>
+    <color name="colorSliderView">#FFFFFFFF</color>
     <color name="colorScreenBackground">#FFECB3</color>
+    <color name="colorBlueGrey">#607D8B</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
-    <color name="colorCardShadow">#BDBDBD</color>
+    <color name="colorCardShadow">#E0E0E0</color>
     <color name="colorLoginScreenBackground">#EEEEEE</color>
 
 </resources>
