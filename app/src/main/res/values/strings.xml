@@ -5,11 +5,11 @@
     <string name="title_activity_age_verification">Verifica tu edad</string>
     <string name="title_activity_tutorial">Tutorial de uso</string>
     <string name="title_activity_main_screen">Pantalla principal</string>
+    <string name="title_activity_notifications">Notificaciones</string>
 
     <!-- SLIDER VIEW STRINGS-->
-    <string name="sv_username">Username</string>
-    <string name="sv_email">username@mail.com</string>
-    <string name="title_activity_notifications">NotificationsActivity</string>
+    <string name="openDrawer">openDrawer</string>
+    <string name="closeDrawer">closeDrawer</string>
 
     <string name="pre_login">La lógica de programación aún más fácil para niños en edad escolar primaria.</string>
     <string name="pre_login_text">¿Ya estas inscrito?</string>

@@ -7,7 +7,7 @@
     tools:context=".AgeVerificationActivity">
 
     <include
-        android:id="@+id/tool_bar"
+        android:id="@+id/toolbar"
         layout="@layout/tool_bar" />
 
     <TextView
@@ -29,17 +29,17 @@
 
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/circleView"
-        android:layout_width="152dp"
+        android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_above="@+id/dividerHorizontal"
         android:layout_centerHorizontal="true"
         android:src="@color/colorWhite"
-        app:civ_border_width="2dp"
-        app:civ_border_color="@android:color/white"/>
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="2dp" />
 
     <EditText
         android:id="@+id/txtAgeValidation"
-        android:layout_width="80dp"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/dividerHorizontal"
         android:layout_centerHorizontal="true"
@@ -55,8 +55,8 @@
         android:layout_width="170dp"
         android:layout_height="220dp"
         android:layout_below="@+id/dividerHorizontal"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPad1"
@@ -64,8 +64,8 @@
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPad2"
@@ -73,8 +73,8 @@
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPad3"
@@ -82,8 +82,8 @@
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPad4"
@@ -92,8 +92,8 @@
             android:layout_below="@+id/dialPad1"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPad5"
@@ -103,19 +103,19 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPad6"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_below="@+id/dialPad3"
             android:layout_alignParentRight="true"
+            android:layout_below="@+id/dialPad3"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPad7"
@@ -124,52 +124,52 @@
             android:layout_below="@+id/dialPad4"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPad8"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/dialPad5"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPad9"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_below="@+id/dialPad6"
             android:layout_alignParentRight="true"
+            android:layout_below="@+id/dialPad6"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPad0"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/dialPad8"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dialPadDelete"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_below="@+id/dialPad8"
             android:layout_alignParentRight="true"
+            android:layout_below="@+id/dialPad8"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:src="@android:color/transparent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorBlackTransparent"/>
+            app:civ_border_color="@color/colorBlackTransparent"
+            app:civ_border_width="2dp" />
 
     </RelativeLayout>
 
@@ -178,12 +178,12 @@
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:gravity="center"
-        android:textSize="18sp"
         android:text="ACEPTAR"
         android:textColor="@color/colorAccent"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
 </RelativeLayout>
