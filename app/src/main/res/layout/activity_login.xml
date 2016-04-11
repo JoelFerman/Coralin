@@ -8,7 +8,7 @@
     tools:context=".LoginActivity">
 
     <include
-        android:id="@+id/tool_bar"
+        android:id="@+id/toolbar"
         layout="@layout/tool_bar" />
 
     <RelativeLayout
@@ -92,33 +92,5 @@
             android:textStyle="bold" />
 
     </RelativeLayout>
-
-    <!--<RelativeLayout-->
-    <!--android:id="@+id/layoutLoginButtons"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_below="@id/dividerHorizontal">-->
-
-    <!--<Button-->
-    <!--android:id="@+id/btnFBLogin"-->
-    <!--android:layout_width="220dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_above="@+id/btnEmailRegister"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:layout_marginBottom="10dp"-->
-    <!--android:background="@color/colorAccent"-->
-    <!--android:text="Registrate con Facebook"-->
-    <!--android:textColor="@color/colorWhite" />-->
-
-    <!--<Button-->
-    <!--android:id="@+id/btnEmailRegister"-->
-    <!--android:layout_width="220dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_centerInParent="true"-->
-    <!--android:background="@drawable/button_shape_no_fill"-->
-    <!--android:text="Registrarse con Correo"-->
-    <!--android:textColor="@color/colorBlack" />-->
-
-    <!--</RelativeLayout>-->
 
 </RelativeLayout>

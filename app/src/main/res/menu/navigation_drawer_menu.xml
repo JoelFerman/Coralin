@@ -3,52 +3,38 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:checked="true"
             android:id="@+id/item_navigation_drawer_my_progress"
+            android:checked="true"
             android:icon="@drawable/ic_my_progress"
             android:title="Mi Progreso" />
-    <!--</group>-->
-    <!--<group android:checkableBehavior="single">-->
         <item
             android:id="@+id/item_navigation_drawer_my_courses"
             android:icon="@drawable/ic_my_courses"
             android:title="Mis Cursos" />
-    <!--</group>-->
-    <!--<group android:checkableBehavior="single">-->
         <item
             android:id="@+id/item_navigation_drawer_courses"
             android:icon="@drawable/ic_courses"
             android:title="Cursos" />
-    <!--</group>-->
-    <!--<group android:checkableBehavior="single">-->
         <item
             android:id="@+id/item_navigation_drawer_other_resources"
             android:icon="@drawable/ic_other_sources"
             android:title="Otros Recursos" />
-    <!--</group>-->
-    <!--<group android:checkableBehavior="single">-->
         <item
             android:id="@+id/item_navigation_drawer_my_downloaded_games"
             android:icon="@drawable/ic_my_downloaded_games"
             android:title="Mis Juegos Descargados" />
-    <!--</group>-->
-    <!--<group android:checkableBehavior="single">-->
         <item
             android:id="@+id/item_navigation_drawer_notifications"
             android:icon="@drawable/ic_notifications"
             android:title="Notificaciones" />
-    <!--</group>-->
-    <!--<group android:checkableBehavior="single">-->
         <item
             android:id="@+id/item_navigation_drawer_settings"
             android:icon="@drawable/ic_settings"
             android:title="Configuraciones" />
-    <!--<item android:title="">-->
-            <item
-                android:id="@+id/item_navigation_drawer_signout"
-                android:icon="@drawable/ic_signout"
-                android:title="Cerrar Sesión" />
-    <!--</item>-->
+        <item
+            android:id="@+id/item_navigation_drawer_signout"
+            android:icon="@drawable/ic_signout"
+            android:title="Cerrar Sesión" />
     </group>
 
 </menu>
