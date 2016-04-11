@@ -20,7 +20,7 @@ public class NotificationsActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_arrow_back);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_action_arrow_back);
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
 }
