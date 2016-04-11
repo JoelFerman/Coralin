@@ -6,25 +6,12 @@
     android:background="@drawable/ic_app_background"
     tools:context=".LoadingActivity">
 
-    <!--<include-->
-        <!--android:id="@+id/tool_bar"-->
-        <!--&lt;!&ndash;layout="@layout/tool_bar" />&ndash;&gt;-->
-
-    <!--<de.hdodenhof.circleimageview.CircleImageView-->
-        <!--android:id="@+id/loadingCircleView"-->
-        <!--android:layout_width="250dp"-->
-        <!--android:layout_height="250dp"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:src="@color/colorWhite" />-->
-
     <ImageView
         android:id="@+id/loadingCoralinPet"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_centerInParent="true"
         android:src="@mipmap/ic_coralin_pet" />
-
-    <!--android:layout_below="@+id/loadingCircleView"-->
 
     <TextView
         android:layout_width="wrap_content"

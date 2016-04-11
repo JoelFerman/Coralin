@@ -4,7 +4,7 @@
     android:layout_height="56dp"
     android:layout_marginLeft="0dp"
     android:background="@color/colorPrimary"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:elevation="4dp">
+    android:elevation="4dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
     <!--android:paddingTop="@dimen/tool_bar_top_padding">-->
 </android.support.v7.widget.Toolbar>

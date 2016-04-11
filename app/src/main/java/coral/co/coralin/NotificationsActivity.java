@@ -16,11 +16,11 @@ public class NotificationsActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
 
-        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_arrow_back);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_action_arrow_back);
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
 }
