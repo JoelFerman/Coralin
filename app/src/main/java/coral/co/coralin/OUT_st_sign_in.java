@@ -1,6 +1,5 @@
 package coral.co.coralin;
 
-
 /**
  * Created by jorgehernandez on 4/11/16.
  */
@@ -12,16 +11,18 @@ public class OUT_st_sign_in {
     private String name;
     private String provider;
     private String status;
+    private String user_token;
     private Integer error;
     private String errormessage;
 
-    public OUT_st_sign_in(int userid, String email, String url_image, String name, String provider, String status, Integer error, String errormessage) {
+    public OUT_st_sign_in(int userid, String email, String url_image, String name, String provider, String status, String user_token,  Integer error, String errormessage) {
         this.userid = userid;
         this.email = email;
         this.url_image = url_image;
         this.name = name;
         this.provider = provider;
         this.status = status;
+        this.user_token = user_token;
         this.error = error;
         this.errormessage = errormessage;
     }
@@ -35,12 +36,18 @@ public class OUT_st_sign_in {
         this.name = var.getEmptystring();
         this.provider = var.getEmptystring();
         this.status = var.getEmptystring();
+        this.user_token = var.getEmptystring();
         this.error = var.getWs_sign_in_okcode_value();
         this.errormessage = var.getEmptystring();
     }
 
+    public String getUser_token() {
+        return user_token;
+    }
 
-
+    public void setUser_token(String user_token) {
+        this.user_token = user_token;
+    }
 
     public Integer getError() {
         return error;
