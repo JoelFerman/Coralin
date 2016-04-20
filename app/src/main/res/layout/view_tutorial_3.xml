@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tut3DividerHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/imgTutorial3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tut3DividerHorizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_tutorial_3" />
+
+    <TextView
+        android:id="@+id/txtTutorial3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tut3DividerHorizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+</RelativeLayout>

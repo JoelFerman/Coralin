@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <include
             android:id="@+id/toolbar"
@@ -32,4 +32,5 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
         app:menu="@menu/navigation_drawer_menu" />
+
 </android.support.v4.widget.DrawerLayout>

@@ -28,8 +28,8 @@
             android:label="@string/title_activity_tutorial" />
         <activity
             android:name=".AgeVerificationActivity"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:label="@string/title_activity_age_verification" />
+            android:label="@string/title_activity_age_verification"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
@@ -39,7 +39,14 @@
         <activity android:name=".NotificationsActivity" />
         <activity android:name=".PreLoginScreenActivity" />
         <activity android:name=".PreRegisterScreenActivity" />
-        <activity android:name=".EmailRegisterScreenActivity"></activity>
+        <activity android:name=".EmailRegisterScreenActivity" />
+        <activity android:name=".CourseDetailsActivity" />
+        <activity android:name=".LessonsActivity"></activity>
+        <!--&lt;!&ndash; ATTENTION: This was auto-generated to add Google Play services to your project for-->
+     <!--App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. &ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="com.google.android.gms.version"-->
+            <!--android:value="@integer/google_play_services_version" />-->
     </application>
 
 </manifest>

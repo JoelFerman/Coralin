@@ -11,6 +11,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -57,18 +60,15 @@ public class MainScreenActivity extends AppCompatActivity
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId())
                 {
-                    //Replacing the main content with ContentFragment Which is our My Progress View;
+                    //Each case is a Fragment, this fragment will replace main view when is selected.
                     case R.id.item_navigation_drawer_my_progress:
-                        Toast.makeText(getApplicationContext(), "My Progress Selected", Toast.LENGTH_SHORT).show();
                         ContentFragment fragment = new ContentFragment();
                         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.frame, fragment);
                         fragmentTransaction.commit();
                         return true;
 
-                    // For rest of the options we just show a toast on click
                     case R.id.item_navigation_drawer_my_courses:
-                        Toast.makeText(getApplicationContext(), "My Courses Selected", Toast.LENGTH_SHORT).show();
                         MyCoursesFragment fragmentMyCourses = new MyCoursesFragment();
                         android.support.v4.app.FragmentTransaction fragmentTransactionMyCourses = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionMyCourses.replace(R.id.frame, fragmentMyCourses);
@@ -76,7 +76,6 @@ public class MainScreenActivity extends AppCompatActivity
                         return true;
 
                     case R.id.item_navigation_drawer_courses:
-                        Toast.makeText(getApplicationContext(), "Courses Selected", Toast.LENGTH_SHORT).show();
                         CoursesFragment fragmentCourses = new CoursesFragment();
                         android.support.v4.app.FragmentTransaction fragmentTransactionCourses = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionCourses.replace(R.id.frame, fragmentCourses);
@@ -84,7 +83,6 @@ public class MainScreenActivity extends AppCompatActivity
                         return true;
 
                     case R.id.item_navigation_drawer_other_resources:
-                        Toast.makeText(getApplicationContext(), "Other Resources Selected", Toast.LENGTH_SHORT).show();
                         OtherResourcesFragment fragmentOtherResources = new OtherResourcesFragment();
                         android.support.v4.app.FragmentTransaction fragmentTransactionOtherResources = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionOtherResources.replace(R.id.frame, fragmentOtherResources);
@@ -92,7 +90,6 @@ public class MainScreenActivity extends AppCompatActivity
                         return true;
 
                     case R.id.item_navigation_drawer_my_downloaded_games:
-                        Toast.makeText(getApplicationContext(), "My Downloaded Games Selected", Toast.LENGTH_SHORT).show();
                         MyDownloadedGamesFragment fragmentMyDownloadedGames = new MyDownloadedGamesFragment();
                         android.support.v4.app.FragmentTransaction fragmentTransactionMyDownloadedGames = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionMyDownloadedGames.replace(R.id.frame, fragmentMyDownloadedGames);
@@ -100,7 +97,6 @@ public class MainScreenActivity extends AppCompatActivity
                         return true;
 
                     case R.id.item_navigation_drawer_notifications:
-                        Toast.makeText(getApplicationContext(), "Notifications Selected", Toast.LENGTH_SHORT).show();
                         NotificationsFragment fragmentNotifications = new NotificationsFragment();
                         android.support.v4.app.FragmentTransaction fragmentTransactionNotifications = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionNotifications.replace(R.id.frame, fragmentNotifications);
@@ -108,7 +104,6 @@ public class MainScreenActivity extends AppCompatActivity
                         return true;
 
                     case R.id.item_navigation_drawer_settings:
-                        Toast.makeText(getApplicationContext(), "Settings Selected", Toast.LENGTH_SHORT).show();
                         SettingsFragment fragmentSettings = new SettingsFragment();
                         android.support.v4.app.FragmentTransaction fragmentTransactionSettings = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionSettings.replace(R.id.frame, fragmentSettings);
@@ -116,14 +111,13 @@ public class MainScreenActivity extends AppCompatActivity
                         return true;
 
                     case R.id.item_navigation_drawer_signout:
-                        Toast.makeText(getApplicationContext(), "Sign Out Selected", Toast.LENGTH_SHORT).show();
                         Intent signOut = new Intent(MainScreenActivity.this, LoginActivity.class);
                         finish();
                         startActivity(signOut);
                         return true;
 
                     default:
-                        Toast.makeText(getApplicationContext(), "Somethings Wrong", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Vaya! parece que algo salió mal.", Toast.LENGTH_SHORT).show();
                         return true;
                 }
             }
@@ -159,7 +153,6 @@ public class MainScreenActivity extends AppCompatActivity
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
-
     }
 
     @Override

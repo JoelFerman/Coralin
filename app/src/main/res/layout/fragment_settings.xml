@@ -4,16 +4,56 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/tool_bar" />
+    <RelativeLayout
+        android:id="@+id/layoutSettingsNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/toolbar">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtSettings"
-        android:text="SETTINGS"
-        android:textSize="30dp"
-        android:layout_centerInParent="true"/>
+        <TextView
+            android:id="@+id/lblSettingsNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36dp"
+            android:text="Notificaciones"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchNotifications"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutSettingsWIFI"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/layoutSettingsNotifications">
+
+        <TextView
+            android:id="@+id/lblSettingsWIFI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36dp"
+            android:text="Descargar sólo \n con WIFI"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchWIFI"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

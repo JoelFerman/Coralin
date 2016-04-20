@@ -5,12 +5,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class PreRegisterScreenActivity extends AppCompatActivity implements OnClickListener
 {
+    private Toolbar toolbar;
+
     Button btnFBLogin, btnEmailRegister;
 
     @Override
@@ -18,6 +21,10 @@ public class PreRegisterScreenActivity extends AppCompatActivity implements OnCl
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pre_register_screen);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Selección de Registro");
+        setSupportActionBar(toolbar);
 
         SharedPreferences pref = getSharedPreferences("ActivityPREF", Context.MODE_PRIVATE);
 
