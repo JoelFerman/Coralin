@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tut1DividerHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/tut1DividerVertical"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/imgTutorial1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tut1DividerHorizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_tutorial_1" />
+
+    <TextView
+        android:id="@+id/txtTutorial1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tut1DividerHorizontal"
+        android:layout_alignTop="@+id/coralinTip1"
+        android:layout_alignRight="@+id/tut1DividerVertical"
+        android:gravity="center"
+        android:text="Aprende a Programar \n Jugando"
+        />
+
+    <ImageView
+        android:id="@+id/coralinTip1"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:layout_below="@+id/tut1DividerHorizontal"
+        android:layout_toRightOf="@+id/tut1DividerVertical"
+        android:src="@drawable/ic_coralin_tip" />
+
+</RelativeLayout>

@@ -1,6 +1,5 @@
 package coral.co.coralin;
 
-
 import android.util.Log;
 
 import org.apache.http.HttpResponse;
@@ -11,8 +10,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.json.JSONObject;
-
-
 
 /**
  * Created by jorgehernandez on 4/11/16.
@@ -107,9 +104,6 @@ public class ws_gucomanager {
             e.printStackTrace();
             return OUT;
         }
-
-
-
 
       return OUT;
     }

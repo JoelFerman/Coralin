@@ -7,11 +7,21 @@
     <string name="title_activity_main_screen">Pantalla principal</string>
     <string name="title_activity_notifications">Notificaciones</string>
 
+    <!--TUTORIAL STRINGS-->
+    <string name="tutorial_1">Tutorial - Página 1 de 3</string>
+    <string name="tutorial_2">Tutorial - Página 2 de 3</string>
+    <string name="tutorial_3">Tutorial - Página 3 de 3</string>
+
     <!-- SLIDER VIEW STRINGS-->
     <string name="openDrawer">openDrawer</string>
     <string name="closeDrawer">closeDrawer</string>
 
     <string name="pre_login">La lógica de programación aún más fácil para niños en edad escolar primaria.</string>
     <string name="pre_login_text">¿Ya estas inscrito?</string>
+    <string name="course1details">Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en una sintaxis que favorezca un código legible.
+
+Se trata de un lenguaje de programación multiparadigma, ya que soporta orientación a objetos, programación imperativa y, en menor medida, programación funcional. Es un lenguaje interpretado, usa tipado dinámico y es multiplataforma.
+
+Es administrado por la Python Software Foundation. Posee una licencia de código abierto, denominada Python Software Foundation License,1 que es compatible con la Licencia pública general de GNU a partir de la versión 2.1.1, e incompatible en ciertas versiones anteriores.</string>
 
 </resources>
