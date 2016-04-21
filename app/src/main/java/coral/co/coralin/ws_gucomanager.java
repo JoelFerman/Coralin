@@ -20,6 +20,7 @@ import java.util.List;
 /**
  * Created by jorgehernandez on 4/11/16.
  */
+
 public class ws_gucomanager {
 
     private static String sign_in_url = "";
@@ -93,12 +94,13 @@ public class ws_gucomanager {
             try{
 
                 if(responseobject.has(variables.getWs_success_request_variable())) {
-                    if (!responseobject.getString(variables.getWs_success_request_variable()).equals(variables.getWs_success_status_code())) {
+                    if (!responseobject.getString(variables.getWs_success_request_variable()).equals(variables.getWs_sign_in_okstatus_value())) {
                         OUT.setStatus(variables.getWs_sign_in_badstatus_value());
                         OUT.setError(variables.getWs_sign_in_errorcode_value());
                         OUT.setErrormessage(responseobject.getString(variables.getWs_error_request_variable()));
                         return OUT;
                     }
+
                 }
 
             }catch (Exception e){
