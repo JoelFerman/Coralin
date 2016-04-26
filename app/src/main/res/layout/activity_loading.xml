@@ -6,11 +6,47 @@
     android:background="@drawable/ic_app_background"
     tools:context=".LoadingActivity">
 
-    <ImageView
-        android:id="@+id/loadingCoralinPet"
+    <RelativeLayout
+        android:id="@+id/layoutCoralPet"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/ic_loading" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="48dp"
+        android:layout_marginLeft="32dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@android:color/white" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_coral_pet"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_loading_tooltip"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/layoutCoralPet"
+        android:layout_marginRight="32dp"/>
+    
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutCoralPet"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="72dp"
+        android:text="Aprende a Programar de manera divertida y fácil"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>

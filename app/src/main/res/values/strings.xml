@@ -18,10 +18,9 @@
 
     <string name="pre_login">La lógica de programación aún más fácil para niños en edad escolar primaria.</string>
     <string name="pre_login_text">¿Ya estas inscrito?</string>
-    <string name="course1details">Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en una sintaxis que favorezca un código legible.
+    <string name="course1details">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. </string>
 
-Se trata de un lenguaje de programación multiparadigma, ya que soporta orientación a objetos, programación imperativa y, en menor medida, programación funcional. Es un lenguaje interpretado, usa tipado dinámico y es multiplataforma.
-
-Es administrado por la Python Software Foundation. Posee una licencia de código abierto, denominada Python Software Foundation License,1 que es compatible con la Licencia pública general de GNU a partir de la versión 2.1.1, e incompatible en ciertas versiones anteriores.</string>
+    <string name="yes_message">SI</string>
+    <string name="no_message">NO</string>
 
 </resources>

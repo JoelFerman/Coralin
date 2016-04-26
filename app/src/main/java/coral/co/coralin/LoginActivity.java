@@ -44,7 +44,12 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed()
+    {
+        Intent goBackPreLogin = new Intent(this, PreLoginScreenActivity.class);
+        finish();
+        startActivity(goBackPreLogin);
+    }
 
     @Override
     public void onClick(View v)

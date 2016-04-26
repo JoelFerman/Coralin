@@ -11,6 +11,12 @@
         android:layout_height="2dp"
         android:layout_centerInParent="true" />
 
+    <TextView
+        android:id="@+id/tut2DividerVertical"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
     <ImageView
         android:id="@+id/imgTutorial2"
         android:layout_width="match_parent"
@@ -19,11 +25,37 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/ic_tutorial_2" />
 
+    <ImageView
+        android:id="@+id/coralinTip2"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/tut2DividerHorizontal"
+        android:layout_toRightOf="@+id/tut2DividerVertical"
+        android:src="@drawable/ic_coralin_tip" />
+
+    <ImageView
+        android:id="@+id/tut2Tooltip"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_toLeftOf="@+id/tut2DividerVertical"
+        android:layout_below="@+id/tut2DividerHorizontal"
+        android:src="@drawable/ic_tooltip_1"/>
+
     <TextView
         android:id="@+id/txtTutorial2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/tut2DividerHorizontal"
-        android:layout_marginTop="@dimen/activity_vertical_margin" />
+        android:layout_alignTop="@+id/tut2Tooltip"
+        android:layout_alignRight="@+id/tut2DividerVertical"
+        android:gravity="center"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="45dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:text="Y compite con tus amigos" />
 
 </RelativeLayout>

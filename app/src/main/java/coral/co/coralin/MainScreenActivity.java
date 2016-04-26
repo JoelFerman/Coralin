@@ -1,7 +1,10 @@
 package coral.co.coralin;
 
+import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -25,7 +28,6 @@ import android.widget.Toast;
 
 public class MainScreenActivity extends AppCompatActivity
 {
-    //Defining Variables
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
@@ -66,6 +68,7 @@ public class MainScreenActivity extends AppCompatActivity
                         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.frame, fragment);
                         fragmentTransaction.commit();
+                        toolbar.setTitle("Mi Progreso");
                         return true;
 
                     case R.id.item_navigation_drawer_my_courses:
@@ -73,6 +76,7 @@ public class MainScreenActivity extends AppCompatActivity
                         android.support.v4.app.FragmentTransaction fragmentTransactionMyCourses = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionMyCourses.replace(R.id.frame, fragmentMyCourses);
                         fragmentTransactionMyCourses.commit();
+                        toolbar.setTitle("Mis Cursos");
                         return true;
 
                     case R.id.item_navigation_drawer_courses:
@@ -80,6 +84,7 @@ public class MainScreenActivity extends AppCompatActivity
                         android.support.v4.app.FragmentTransaction fragmentTransactionCourses = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionCourses.replace(R.id.frame, fragmentCourses);
                         fragmentTransactionCourses.commit();
+                        toolbar.setTitle("Cursos");
                         return true;
 
                     case R.id.item_navigation_drawer_other_resources:
@@ -87,6 +92,7 @@ public class MainScreenActivity extends AppCompatActivity
                         android.support.v4.app.FragmentTransaction fragmentTransactionOtherResources = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionOtherResources.replace(R.id.frame, fragmentOtherResources);
                         fragmentTransactionOtherResources.commit();
+                        toolbar.setTitle("Otros Recursos");
                         return true;
 
                     case R.id.item_navigation_drawer_my_downloaded_games:
@@ -94,6 +100,7 @@ public class MainScreenActivity extends AppCompatActivity
                         android.support.v4.app.FragmentTransaction fragmentTransactionMyDownloadedGames = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionMyDownloadedGames.replace(R.id.frame, fragmentMyDownloadedGames);
                         fragmentTransactionMyDownloadedGames.commit();
+                        toolbar.setTitle("Mis Juegos Descargados");
                         return true;
 
                     case R.id.item_navigation_drawer_notifications:
@@ -101,6 +108,7 @@ public class MainScreenActivity extends AppCompatActivity
                         android.support.v4.app.FragmentTransaction fragmentTransactionNotifications = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionNotifications.replace(R.id.frame, fragmentNotifications);
                         fragmentTransactionNotifications.commit();
+                        toolbar.setTitle("Notificaciones");
                         return true;
 
                     case R.id.item_navigation_drawer_settings:
@@ -108,12 +116,30 @@ public class MainScreenActivity extends AppCompatActivity
                         android.support.v4.app.FragmentTransaction fragmentTransactionSettings = getSupportFragmentManager().beginTransaction();
                         fragmentTransactionSettings.replace(R.id.frame, fragmentSettings);
                         fragmentTransactionSettings.commit();
+                        toolbar.setTitle("Configuración");
                         return true;
 
                     case R.id.item_navigation_drawer_signout:
-                        Intent signOut = new Intent(MainScreenActivity.this, LoginActivity.class);
-                        finish();
-                        startActivity(signOut);
+                        AlertDialog.Builder exitDialog = new AlertDialog.Builder(MainScreenActivity.this);
+                        exitDialog.setTitle("LOGOUT");
+                        exitDialog.setMessage("Estas seguro que deseas cerrar tu sesion?");
+
+                        exitDialog.setPositiveButton(getString(R.string.yes_message), new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent signOut = new Intent(MainScreenActivity.this, LoginActivity.class);
+                                finish();
+                                startActivity(signOut);
+                            }
+                        });
+
+                        exitDialog.setNegativeButton(getString(R.string.no_message), new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                        AlertDialog exitAlert = exitDialog.create();
+                        exitAlert.show();
                         return true;
 
                     default:

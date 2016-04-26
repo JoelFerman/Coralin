@@ -41,7 +41,12 @@ public class PreRegisterScreenActivity extends AppCompatActivity implements OnCl
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed()
+    {
+        Intent goBackPreLogin = new Intent(this, PreLoginScreenActivity.class);
+        finish();
+        startActivity(goBackPreLogin);
+    }
 
     @Override
     public void onClick(View v)
