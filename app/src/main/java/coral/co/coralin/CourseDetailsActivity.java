@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class CourseDetailsActivity extends AppCompatActivity implements View.OnClickListener
 {
-    Button btnLessons;
+    Button btnCourseRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -16,9 +16,9 @@ public class CourseDetailsActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_details);
 
-        btnLessons = (Button) findViewById(R.id.btnLessons);
+        btnCourseRegister = (Button) findViewById(R.id.btnCourseRegister);
 
-        btnLessons.setOnClickListener(this);
+        btnCourseRegister.setOnClickListener(this);
     }
 
     @Override
@@ -26,8 +26,11 @@ public class CourseDetailsActivity extends AppCompatActivity implements View.OnC
 
         switch (v.getId())
         {
-            case R.id.btnLessons:
-                Intent goLessons = new Intent(this, MainScreenActivity.class);
+            default:
+                break;
+
+            case R.id.btnCourseRegister:
+                Intent goLessons = new Intent(this, LessonsActivity.class);
                 finish();
                 startActivity(goLessons);
                 break;

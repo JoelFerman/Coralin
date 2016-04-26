@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TutorialActivity">
 
     <include
@@ -22,7 +23,7 @@
         android:layout_centerHorizontal="true"
         android:text="Saltar Tutorial"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:textColor="@android:color/white"
         android:layout_marginBottom="@dimen/activity_vertical_margin"/>
 

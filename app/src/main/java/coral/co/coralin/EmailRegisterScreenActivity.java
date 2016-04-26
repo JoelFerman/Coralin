@@ -1,5 +1,6 @@
 package coral.co.coralin;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +23,12 @@ public class EmailRegisterScreenActivity extends AppCompatActivity implements Vi
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed()
+    {
+        Intent goBackPreRegister = new Intent(this, PreRegisterScreenActivity.class);
+        finish();
+        startActivity(goBackPreRegister);
+    }
 
     @Override
     public void onClick(View v)

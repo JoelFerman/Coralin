@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
     tools:context="coral.co.coralin.CourseDetailsActivity">
 
     <ImageView
@@ -18,16 +19,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/img_course1"
+        android:gravity="center"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="@string/course1details" />
 
     <Button
-        android:id="@+id/btnLessons"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnCourseRegister"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="Lecciones" />
+        android:background="@drawable/button_shape_no_fill"
+        android:text="Registrarse" />
 
 </RelativeLayout>
