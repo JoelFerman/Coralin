@@ -20,7 +20,6 @@ import java.util.List;
 /**
  * Created by jorgehernandez on 4/11/16.
  */
-
 public class ws_gucomanager {
 
     private static String sign_in_url = "";
@@ -37,7 +36,7 @@ public class ws_gucomanager {
     }
 
     public OUT_st_sign_in sing_in_guco(IN_st_sign_in user) {
-       //Definition
+        //Definition
         OUT_st_sign_in OUT;
         ws_static_variables variables;
         HttpClient httpclient;
@@ -89,12 +88,13 @@ public class ws_gucomanager {
             JSONObject userobject = new JSONObject();
 
 
-
+            //Log.e("response", "response -----" + responseText);
 
             try{
 
                 if(responseobject.has(variables.getWs_success_request_variable())) {
                     if (!responseobject.getString(variables.getWs_success_request_variable()).equals(variables.getWs_sign_in_okstatus_value())) {
+                        //Log.e("response", "status -----" + variables.getWs_success_request_variable() + " *** success_status_code   " + variables.getWs_sign_in_okstatus_value() );
                         OUT.setStatus(variables.getWs_sign_in_badstatus_value());
                         OUT.setError(variables.getWs_sign_in_errorcode_value());
                         OUT.setErrormessage(responseobject.getString(variables.getWs_error_request_variable()));
@@ -113,6 +113,37 @@ public class ws_gucomanager {
 
             }
 
+           // Log.e("response", "response -----" + responseText);
+
+            if(responseobject.has("error")){
+                if(responseobject.getString("error").equals("Invalid email or password.")){
+
+                    OUT.setStatus(variables.getWs_sign_in_badstatus_value());
+                    OUT.setError(variables.getWs_sign_in_errorcode_value());
+                    OUT.setErrormessage(responseobject.getString("error"));
+
+                    return OUT;
+                }
+            }else{
+                if(responseobject.has("status")){
+                    if(responseobject.getString("status").equals("ok")){
+
+                        OUT.setStatus(variables.getWs_sign_in_badstatus_value());
+                        OUT.setError(variables.getWs_sign_in_errorcode_value());
+                        OUT.setErrormessage(responseobject.getString("error"));
+
+                        return OUT;
+                    }else{
+
+                    }
+
+                }
+
+            }
+
+
+
+
             userobject = (JSONObject) responseobject.get(variables.getWs_sign_in_user_variable());
 
             OUT.setEmail(userobject.getString(variables.getWs_sign_in_email_variable()));
@@ -121,6 +152,7 @@ public class ws_gucomanager {
             OUT.setProvider(userobject.getString(variables.getWs_sign_in_provider_variable()));
             OUT.setUserid(Integer.parseInt(userobject.getString(variables.getWs_sign_in_id_variable())));
             OUT.setUrl_image(userobject.getString(variables.getWs_sign_in_image_variable()));
+            OUT.setUser_token(userobject.getString(variables.getWs_sign_up_authentication_token_variable()));
             OUT.setError(variables.getWs_sign_in_okcode_value());
             OUT.setErrormessage(variables.getEmptystring());
 
@@ -151,10 +183,10 @@ public class ws_gucomanager {
 
 
 
-      return OUT;
+        return OUT;
     }
 
-//
+    //
     public OUT_st_sign_up sing_up_guco(IN_st_sign_up user) {
         //Definition
         OUT_st_sign_up OUT;
