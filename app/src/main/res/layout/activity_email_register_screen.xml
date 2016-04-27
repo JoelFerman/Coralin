@@ -13,7 +13,7 @@
     <RelativeLayout
         android:id="@+id/layoutUserLogin"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
+        android:layout_height="480dp"
         android:layout_centerInParent="true"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -91,11 +91,31 @@
                 android:textStyle="italic" />
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/floatingLabelconfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/floatingLabelRPassword"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+
+            <EditText
+                android:id="@+id/txtRconfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Reingrese Contraseña"
+                android:inputType="textPassword"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorCardShadow"
+                android:textStyle="italic" />
+        </android.support.design.widget.TextInputLayout>
+
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="105dp"
             android:layout_height="40dp"
-            android:layout_alignEnd="@+id/floatingLabelRPassword"
+            android:layout_alignEnd="@+id/floatingLabelconfirmPassword"
             android:layout_alignParentBottom="true"
             android:background="@drawable/button_shape_no_fill"
             android:text="Registrar"
