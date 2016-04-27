@@ -1,21 +1,20 @@
 package coral.co.coralin;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.animation.GridLayoutAnimationController;
+import android.widget.GridLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LessonsActivity extends AppCompatActivity
 {
-    int spanCount = 2, spacing = 50;
-
-    boolean includeEdge = true;
-
     private static final String TAG3 = "LessonActivity";
 
     protected RecyclerView lessonRecyclerView;
@@ -31,8 +30,7 @@ public class LessonsActivity extends AppCompatActivity
         lessonRecyclerView = (RecyclerView) findViewById(R.id.lessonRecyclerview);
         Lesson_RecyclerView_Adapter adapter = new Lesson_RecyclerView_Adapter(lessonData, this);
         lessonRecyclerView.setAdapter(adapter);
-        lessonRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        lessonRecyclerView.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
+        lessonRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
     }
 
     @Override

@@ -41,7 +41,7 @@ public class Lesson_RecyclerView_Adapter extends RecyclerView.Adapter<Lesson_Vie
         holder.lessonCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goLesson = new Intent(context, LessonsActivity.class);
+                Intent goLesson = new Intent(context, LessonDetailsActivity.class);
                 context.startActivity(goLesson);
             }
         });
