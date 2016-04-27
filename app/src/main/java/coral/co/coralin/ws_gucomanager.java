@@ -266,9 +266,8 @@ public class ws_gucomanager {
 
             }
 
-
-
-            userobject = (JSONObject) responseobject.get(variables.getWs_sign_in_user_variable());
+            Log.e("response", "*****   " + responseobject.toString());
+            //userobject = (JSONObject) responseobject.get(variables.getWs_sign_in_user_variable());
 
             stateobject = (JSONObject) responseobject.get(variables.getWs_sign_up_state_variable());
 

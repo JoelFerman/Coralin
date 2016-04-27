@@ -7,7 +7,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -40,6 +42,31 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
         txtEmail = (EditText) findViewById(R.id.txtEmail);
         txtPassword = (EditText) findViewById(R.id.txtPassword);
 
+        txtEmail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!txtEmail.getText().toString().isEmpty()){
+
+                 if(!isValidEmail(txtEmail.getText().toString())){
+                      txtEmail.setError("Introduzca correo válido.");
+
+
+                 }
+             }
+
+            }
+        });
 
         assert btnLogin != null;
         btnLogin.setOnClickListener(this);
@@ -101,7 +128,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
 
                     }else{
 
-                        Toast.makeText(LoginActivity.this, "Introduzca una dirección de correo válida.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Introduzca un correo válido.", Toast.LENGTH_SHORT).show();
                     }
 
 
@@ -109,18 +136,6 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
 
                 }
 
-//
-//                if (txtEmail.getText().toString().equals(user) && txtPassword.getText().toString().equals(pass))
-//                {
-//                    Intent goMainScreen = new Intent(this, MainScreenActivity.class);
-//                    finish();
-//                    startActivity(goMainScreen);
-//                }
-//                else
-//                {
-//                    Toast.makeText(LoginActivity.this, "Credenciales incorrectas, intentalo de nuevo.", Toast.LENGTH_SHORT).show();
-//                    txtPassword.setText("");
-//                }
             }
             break;
         }
