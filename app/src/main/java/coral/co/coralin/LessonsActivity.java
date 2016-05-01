@@ -45,10 +45,10 @@ public class LessonsActivity extends AppCompatActivity
 
         List<LessonData> lessonData = new ArrayList<>();
 
-        lessonData.add(new LessonData("Lesson 1", R.drawable.course_1));
-        lessonData.add(new LessonData("Lesson 2", R.drawable.course_2));
-        lessonData.add(new LessonData("Lesson 3", R.drawable.course_3));
-        lessonData.add(new LessonData("Lesson 4", R.drawable.course_4));
+        lessonData.add(new LessonData("Lesson 1", R.drawable.ic_lesson));
+        lessonData.add(new LessonData("Lesson 2", R.drawable.ic_lesson));
+        lessonData.add(new LessonData("Lesson 3", R.drawable.ic_lesson));
+        lessonData.add(new LessonData("Lesson 4", R.drawable.ic_lesson));
 
         return lessonData;
     }

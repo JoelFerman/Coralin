@@ -16,14 +16,14 @@
         android:layout_height="2dp"
         android:layout_centerInParent="true" />
 
-    <Button
-        android:id="@+id/btnFBLogin"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_above="@+id/btnEmailRegister"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:background="@drawable/ic_facebook_register" />
+    <!--<Button-->
+        <!--android:id="@+id/btnFBLogin"-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_above="@+id/btnEmailRegister"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="@dimen/activity_vertical_margin"-->
+        <!--android:background="@drawable/ic_facebook_register" />-->
 
     <Button
         android:id="@+id/btnEmailRegister"

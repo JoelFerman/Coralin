@@ -58,10 +58,7 @@ public class CoursesFragment extends Fragment implements View.OnClickListener
 
         List<Data> data = new ArrayList<>();
 
-        data.add(new Data("HTML 5", "This is the description", R.drawable.course_1));
-        data.add(new Data("Python", "This is the description", R.drawable.course_2));
-        data.add(new Data("CSS 3", "This is the description", R.drawable.course_3));
-        data.add(new Data("Node JS", "This is the description", R.drawable.course_4));
+        data.add(new Data("HTML y CSS", "Curso para aprender HTML y CSS", R.drawable.course_1));
 
         return data;
     }

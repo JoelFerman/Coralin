@@ -42,7 +42,7 @@ public class PreLoginScreenActivity extends AppCompatActivity implements View.On
                 break;
 
             case R.id.txtSignInActivity:
-                Intent goSignInScreenActivity = new Intent(this, PreRegisterScreenActivity.class);
+                Intent goSignInScreenActivity = new Intent(this, EmailRegisterScreenActivity.class);
                 finish();
                 startActivity(goSignInScreenActivity);
                 break;
