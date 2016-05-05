@@ -88,18 +88,20 @@ public class ws_gucomanager {
             JSONObject userobject = new JSONObject();
 
 
-            //Log.e("response", "response -----" + responseText);
+            Log.e("response", "response -----" + responseText);
 
             try{
 
-                if(responseobject.has(variables.getWs_success_request_variable())) {
-                    if (!responseobject.getString(variables.getWs_success_request_variable()).equals(variables.getWs_sign_in_okstatus_value())) {
-                        //Log.e("response", "status -----" + variables.getWs_success_request_variable() + " *** success_status_code   " + variables.getWs_sign_in_okstatus_value() );
-                        OUT.setStatus(variables.getWs_sign_in_badstatus_value());
-                        OUT.setError(variables.getWs_sign_in_errorcode_value());
-                        OUT.setErrormessage(responseobject.getString(variables.getWs_error_request_variable()));
+                Log.e("response", "response -----" + variables.getWs_success_request_variable());
+                if(responseobject.has("error")) {
+                   Log.e("response", "response -----" + "Si es existe ese campo en la respuesta");
+                   // if (!responseobject.getString(variables.getWs_success_request_variable()).equals(variables.getWs_sign_in_okstatus_value())) {
+                      //  Log.e("response", "status -----" + variables.getWs_success_request_variable() + " *** success_status_code   " + variables.getWs_sign_in_okstatus_value() );
+                        OUT.setStatus("error");
+                        OUT.setError(1);
+                        OUT.setErrormessage(responseobject.getString("error"));
                         return OUT;
-                    }
+                    //}
 
                 }
 
@@ -115,21 +117,36 @@ public class ws_gucomanager {
 
            // Log.e("response", "response -----" + responseText);
 
-            if(responseobject.has("error")){
-                if(responseobject.getString("error").equals("Invalid email or password.")){
+            if(responseobject.has("user")){
 
-                    OUT.setStatus(variables.getWs_sign_in_badstatus_value());
-                    OUT.setError(variables.getWs_sign_in_errorcode_value());
-                    OUT.setErrormessage(responseobject.getString("error"));
+                userobject = (JSONObject) responseobject.get(variables.getWs_sign_in_user_variable());
 
-                    return OUT;
-                }
+                OUT.setEmail(userobject.getString(variables.getWs_sign_in_email_variable()));
+                OUT.setName(userobject.getString(variables.getWs_sign_in_name_variable()));
+                OUT.setStatus(responseobject.getString(variables.getWs_sign_in_status_variable()));
+                OUT.setProvider(userobject.getString(variables.getWs_sign_in_provider_variable()));
+                OUT.setUserid(Integer.parseInt(userobject.getString(variables.getWs_sign_in_id_variable())));
+                OUT.setUrl_image(userobject.getString(variables.getWs_sign_in_image_variable()));
+                OUT.setUser_token(userobject.getString(variables.getWs_sign_up_authentication_token_variable()));
+                OUT.setError(variables.getWs_sign_in_okcode_value());
+                OUT.setErrormessage(variables.getEmptystring());
+
+
+                Log.e("response", "email -----" + OUT.getEmail());
+                Log.e("response", "name -----" + OUT.getName());
+                Log.e("response", "status -----" + OUT.getStatus());
+                Log.e("response", "provider -----" + OUT.getProvider());
+                Log.e("response", "id -----" + OUT.getUserid());
+                Log.e("response", "image -----" + OUT.getUrl_image());
+
+                Log.e("response", "response -----" + responseText);
+
             }else{
                 if(responseobject.has("status")){
                     if(responseobject.getString("status").equals("ok")){
 
                         OUT.setStatus(variables.getWs_sign_in_badstatus_value());
-                        OUT.setError(variables.getWs_sign_in_errorcode_value());
+                        OUT.setError(1);
                         OUT.setErrormessage(responseobject.getString("error"));
 
                         return OUT;
@@ -144,27 +161,27 @@ public class ws_gucomanager {
 
 
 
-            userobject = (JSONObject) responseobject.get(variables.getWs_sign_in_user_variable());
-
-            OUT.setEmail(userobject.getString(variables.getWs_sign_in_email_variable()));
-            OUT.setName(userobject.getString(variables.getWs_sign_in_name_variable()));
-            OUT.setStatus(responseobject.getString(variables.getWs_sign_in_status_variable()));
-            OUT.setProvider(userobject.getString(variables.getWs_sign_in_provider_variable()));
-            OUT.setUserid(Integer.parseInt(userobject.getString(variables.getWs_sign_in_id_variable())));
-            OUT.setUrl_image(userobject.getString(variables.getWs_sign_in_image_variable()));
-            OUT.setUser_token(userobject.getString(variables.getWs_sign_up_authentication_token_variable()));
-            OUT.setError(variables.getWs_sign_in_okcode_value());
-            OUT.setErrormessage(variables.getEmptystring());
-
-
-            Log.e("response", "email -----" + OUT.getEmail());
-            Log.e("response", "name -----" + OUT.getName());
-            Log.e("response", "status -----" + OUT.getStatus());
-            Log.e("response", "provider -----" + OUT.getProvider());
-            Log.e("response", "id -----" + OUT.getUserid());
-            Log.e("response", "image -----" + OUT.getUrl_image());
-
-            Log.e("response", "response -----" + responseText);
+//            userobject = (JSONObject) responseobject.get(variables.getWs_sign_in_user_variable());
+//
+//            OUT.setEmail(userobject.getString(variables.getWs_sign_in_email_variable()));
+//            OUT.setName(userobject.getString(variables.getWs_sign_in_name_variable()));
+//            OUT.setStatus(responseobject.getString(variables.getWs_sign_in_status_variable()));
+//            OUT.setProvider(userobject.getString(variables.getWs_sign_in_provider_variable()));
+//            OUT.setUserid(Integer.parseInt(userobject.getString(variables.getWs_sign_in_id_variable())));
+//            OUT.setUrl_image(userobject.getString(variables.getWs_sign_in_image_variable()));
+//            OUT.setUser_token(userobject.getString(variables.getWs_sign_up_authentication_token_variable()));
+//            OUT.setError(variables.getWs_sign_in_okcode_value());
+//            OUT.setErrormessage(variables.getEmptystring());
+//
+//
+//            Log.e("response", "email -----" + OUT.getEmail());
+//            Log.e("response", "name -----" + OUT.getName());
+//            Log.e("response", "status -----" + OUT.getStatus());
+//            Log.e("response", "provider -----" + OUT.getProvider());
+//            Log.e("response", "id -----" + OUT.getUserid());
+//            Log.e("response", "image -----" + OUT.getUrl_image());
+//
+//            Log.e("response", "response -----" + responseText);
 
 
         } catch (UnknownHostException e) {
