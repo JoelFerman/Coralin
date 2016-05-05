@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
                         wsvars = new ws_static_variables();
 
 
-                        if (asyncT.getResponse().getError() == wsvars.getWs_sign_in_errorcode_value() ) {
+                        if (asyncT.getResponse().getError() == 0 ) {
                             Intent goMainScreen = new Intent(this, MainScreenActivity.class);
                             finish();
                             startActivity(goMainScreen);
