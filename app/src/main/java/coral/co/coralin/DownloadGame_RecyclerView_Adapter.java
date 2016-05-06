@@ -45,7 +45,8 @@ public class DownloadGame_RecyclerView_Adapter extends RecyclerView.Adapter<Down
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent goLessonPlay = new Intent(context, GameScreenActivity.class);
+                context.startActivity(goLessonPlay);
             }
         });
 

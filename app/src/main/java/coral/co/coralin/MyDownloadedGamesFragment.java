@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class MyDownloadedGamesFragment extends Fragment implements View.OnClickListener
 {
-    private static final String TAG2 = "CoursesFragment";
+    private static final String TAG2 = "MyDownloadedGamesFragment";
 
     protected RecyclerView downloadGameRecyclerview;
 
@@ -54,7 +54,7 @@ public class MyDownloadedGamesFragment extends Fragment implements View.OnClickL
 
         List<DownloadGameData> data = new ArrayList<>();
 
-        data.add(new DownloadGameData("Robo-JHON", R.drawable.ic_game, R.drawable.ic_game_download, R.drawable.ic_game_delete));
+        data.add(new DownloadGameData("Ro-Bot-Cito", R.drawable.ic_game, R.drawable.ic_game_download, R.drawable.ic_game_delete));
 
         return data;
     }

@@ -7,6 +7,11 @@
     <string name="title_activity_main_screen">Pantalla principal</string>
     <string name="title_activity_notifications">Notificaciones</string>
 
+    <!--YOUTUBE PLAYER STRINGS-->
+    <string name="player_error">Error initializing YouTube player</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+
     <!--TUTORIAL STRINGS-->
     <string name="tutorial_1">Tutorial - Página 1 de 3</string>
     <string name="tutorial_2">Tutorial - Página 2 de 3</string>
