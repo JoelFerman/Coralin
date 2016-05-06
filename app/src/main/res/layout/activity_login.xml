@@ -17,7 +17,7 @@
         android:layout_centerInParent="true"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:background="@drawable/layer_card_background"
+        android:background="@drawable/border"
         android:elevation="4dp"
         android:gravity="center_horizontal">
 
@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Contraseña"
-                android:password="true"
+                android:inputType="textPassword"
                 android:textColor="@color/colorBlack"
                 android:textColorHint="@color/colorCardShadow"
                 android:textStyle="italic" />

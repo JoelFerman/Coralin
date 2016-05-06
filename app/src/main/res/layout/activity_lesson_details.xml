@@ -20,20 +20,28 @@
     <!--android:layout_marginRight="@dimen/activity_horizontal_margin"-->
     <!--android:background="@drawable/ic_lesson_pic"/>-->
 
-    <WebView
-        android:id="@+id/lessonWebView"
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/lesson_video"
+        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="8dp" />
+        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+    <!--<WebView-->
+        <!--android:id="@+id/lessonWebView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="220dp"-->
+        <!--android:layout_below="@+id/toolbar"-->
+        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+        <!--android:layout_marginRight="@dimen/activity_horizontal_margin"-->
+        <!--android:layout_marginTop="8dp" />-->
 
     <TextView
         android:id="@+id/txtLessonDetail"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_below="@+id/lessonWebView"
+        android:layout_below="@+id/lesson_video"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
