@@ -28,7 +28,7 @@ public class LessonDetailsActivity extends YouTubeBaseActivity implements YouTub
 
     //WebView lessonWebView;
 
-    String gameURL = "http://coral.rosalilastudio.com/game.html?user_email=joelferman@hotmail.com&user_token=6d_jMoVH1vvzzxvh38CU&current_level=1";//"http://beta.html5test.com/";
+    GlobalVars GV = new GlobalVars();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -53,6 +53,7 @@ public class LessonDetailsActivity extends YouTubeBaseActivity implements YouTub
         switch (v.getId())
         {
             case R.id.btnLessonDetailPlay:
+                String gameURL = "http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=1";//"http://beta.html5test.com/";
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(gameURL));
                 startActivity(browserIntent);
 //                Intent goLessonPlay = new Intent(this, GameScreenActivity.class);

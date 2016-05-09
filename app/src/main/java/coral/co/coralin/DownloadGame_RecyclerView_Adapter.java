@@ -2,6 +2,7 @@ package coral.co.coralin;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,7 @@ import java.util.List;
  */
 public class DownloadGame_RecyclerView_Adapter extends RecyclerView.Adapter<DownloadedGame_View_Holder> {
 
+    String gameURL = "http://coral.rosalilastudio.com/game.html?user_email=joelferman@hotmail.com&user_token=6d_jMoVH1vvzzxvh38CU&current_level=1";//"http://beta.html5test.com/";
     List<DownloadGameData> list = Collections.emptyList();
     Context context;
 
@@ -45,8 +47,8 @@ public class DownloadGame_RecyclerView_Adapter extends RecyclerView.Adapter<Down
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goLessonPlay = new Intent(context, GameScreenActivity.class);
-                context.startActivity(goLessonPlay);
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(gameURL));
+                context.startActivity(browserIntent);
             }
         });
 
