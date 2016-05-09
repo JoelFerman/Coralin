@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
 
     GlobalVars GV = new GlobalVars();
 
-    OUT_st_sign_in OUT;
+    static OUT_st_sign_in OUT= new OUT_st_sign_in();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -108,7 +108,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
 
                         AsyncT asyncT = new AsyncT();
 
-                        OUT = new OUT_st_sign_in();
+                       //OUT = new OUT_st_sign_in();
 
                         try {
                             String str_result = asyncT.execute().get().toString();
@@ -122,12 +122,14 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
                         GV.userEmail = OUT.getEmail(); //asyncT.getResponse().getEmail();
                         GV.userName = OUT.getName();
                         GV.userToken = OUT.getUser_token();
-                        Log.e("TEST::::", wsvars.getWs_sign_in_errorcode_value().toString());
-                        Log.w("TEST2::::::::::", wsvars.getWs_sign_in_errorcode_value().toString());
+//                        Log.e("TEST000::::", OUT.getError().toString());
+//                        Log.e("Email::::", GV.userEmail);
+//                        Log.e("TEST::::", wsvars.getWs_sign_in_errorcode_value().toString());
+//                        Log.w("TEST2::::::::::", wsvars.getWs_sign_in_errorcode_value().toString());
 
 
 
-                        if (asyncT.getResponse().getError() != wsvars.getWs_sign_in_errorcode_value() )
+                        if (asyncT.getResponse().getError() == 0)
                         {
                             Intent goMainScreen = new Intent(this, MainScreenActivity.class);
                             goMainScreen.putExtra("intUserEmail", OUT.getEmail());
@@ -181,13 +183,13 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
         protected Void doInBackground(Void... voids) {
 
             IN_st_sign_in IN;
-            OUT_st_sign_in OUT;
+            //OUT_st_sign_in OUT;
             try {
 
 
                 IN = new IN_st_sign_in();
 
-                OUT = new OUT_st_sign_in();
+                //OUT = new OUT_st_sign_in();
 
                 ws_gucomanager wsmng;
                 wsmng = new ws_gucomanager();
@@ -198,6 +200,10 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
                 OUT = wsmng.sing_in_guco(IN);
 
                 setResponse(OUT);
+
+                Log.e("GucoValues----   ", OUT.getEmail());
+                Log.e("GucoValues----   ", OUT.getError().toString());
+
 
 
 
