@@ -130,6 +130,8 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
                         if (asyncT.getResponse().getError() != wsvars.getWs_sign_in_errorcode_value() )
                         {
                             Intent goMainScreen = new Intent(this, MainScreenActivity.class);
+                            goMainScreen.putExtra("intUserEmail", OUT.getEmail());
+                            Toast.makeText(this, OUT.getEmail(), Toast.LENGTH_SHORT).show();
                             startActivity(goMainScreen);
                             finish();
 

@@ -53,11 +53,19 @@ public class MainScreenActivity extends AppCompatActivity
         assert navigationView != null;
         View drawerHeader = navigationView.inflateHeaderView(R.layout.header);
 
-        txtUserEmail = (TextView) drawerHeader.findViewById(R.id.hdUserEmail);
+        Intent getUserInfo = getIntent();
+        Bundle bundle = getUserInfo.getExtras();
+
+        if (bundle != null)
+        {
+            txtUserEmail = (TextView) drawerHeader.findViewById(R.id.hdUserEmail);
+            String j = (String) bundle.get("intUserEmail");
+            txtUserEmail.setText(j);
+        }
+
+
 
         String strUserEmailtext = GV.userEmail;
-
-        txtUserEmail.setText(strUserEmailtext);
 
         //Setting Navigation View Item Selected Listener to handle the item click of the navigation menu
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()
