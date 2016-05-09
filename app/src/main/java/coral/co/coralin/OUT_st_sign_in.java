@@ -37,7 +37,7 @@ public class OUT_st_sign_in {
         this.provider = var.getEmptystring();
         this.status = var.getEmptystring();
         this.user_token = var.getEmptystring();
-        this.error = var.getWs_sign_in_okcode_value();
+        this.error = 1;
         this.errormessage = var.getEmptystring();
     }
 

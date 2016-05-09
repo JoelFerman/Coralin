@@ -84,7 +84,7 @@ public class EmailRegisterScreenActivity extends AppCompatActivity implements Vi
                 break;
 
             case R.id.btnRegister: {
-                //Log.e("response","hey");
+
                 user= txtEmail.getText().toString();
                 pass= txtPassword.getText().toString();
                 if(isValidEmail(txtEmail.getText().toString())){

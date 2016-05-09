@@ -10,7 +10,6 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -115,16 +114,14 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
                         wsvars = new ws_static_variables();
 
 
-                        if (asyncT.getResponse().getStatus().equals("ok")){//.getError().equals(wsvars.getWs_sign_in_errorcode_value())) {
+                        if (asyncT.getResponse().getError() == 0 ) {
                             Intent goMainScreen = new Intent(this, MainScreenActivity.class);
                             finish();
                             startActivity(goMainScreen);
 
 
                         }else{
-                            Toast toast = Toast.makeText(LoginActivity.this, asyncT.getResponse().getErrormessage(), Toast.LENGTH_SHORT);
-                            toast.setGravity(Gravity.CENTER,0,0);
-                            toast.show();
+                            Toast.makeText(LoginActivity.this, asyncT.getResponse().getErrormessage(), Toast.LENGTH_SHORT).show();
                             txtPassword.setText("");
 
                         }
@@ -195,7 +192,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
                     @Override
                     public void run() {
                         //Here add the toast
-                        Toast.makeText(getApplicationContext(),"En este momento esta fuera de servicio", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this,"En este momento esta fuera de servicio", Toast.LENGTH_SHORT).show();
                     }
                 });
 
