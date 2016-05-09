@@ -21,7 +21,7 @@ public class MyCoursesFragment extends Fragment
     private static final String TAG = "MyCoursesFragment";
 
     protected RecyclerView recyclerView;
-    protected CardView cardView;
+    //protected CardView cardView;
 
     @Nullable
     @Override
@@ -30,22 +30,22 @@ public class MyCoursesFragment extends Fragment
         View v = inflater.inflate(R.layout.fragment_my_courses, container, false);
         v.setTag(TAG);
 
-        List<Data> data = fill_with_data();
+        List<MyCoursesData> data = fill_with_data();
 
         recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview);
-        Recycler_View_Adapter adapter = new Recycler_View_Adapter(data, getActivity());
+        MyCourses_RecyclerView_Adapter adapter = new MyCourses_RecyclerView_Adapter(data, getActivity());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return v;
     }
 
-    public List<Data> fill_with_data() {
+    public List<MyCoursesData> fill_with_data() {
 
-        List<Data> data = new ArrayList<>();
+        List<MyCoursesData> data = new ArrayList<>();
 
-        data.add(new Data("Python", "This is the description", R.drawable.course_2));
-        data.add(new Data("Node JS", "This is the description", R.drawable.course_4));
+        data.add(new MyCoursesData("Python", "This is the description", R.drawable.course_2));
+        data.add(new MyCoursesData("Node JS", "This is the description", R.drawable.course_4));
 
         return data;
     }

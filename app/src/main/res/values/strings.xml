@@ -7,6 +7,11 @@
     <string name="title_activity_main_screen">Pantalla principal</string>
     <string name="title_activity_notifications">Notificaciones</string>
 
+    <!--YOUTUBE PLAYER STRINGS-->
+    <string name="player_error">Error initializing YouTube player</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+
     <!--TUTORIAL STRINGS-->
     <string name="tutorial_1">Tutorial - Página 1 de 3</string>
     <string name="tutorial_2">Tutorial - Página 2 de 3</string>
@@ -16,9 +21,10 @@
     <string name="openDrawer">openDrawer</string>
     <string name="closeDrawer">closeDrawer</string>
 
-    <string name="pre_login">La lógica de programación aún más fácil para niños en edad escolar primaria.</string>
+    <string name="pre_login">La lógica de programación aún más fácil para niños en edad escolar primaria y secundaria.</string>
     <string name="pre_login_text">¿Ya estas inscrito?</string>
-    <string name="course1details">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. </string>
+    <string name="course1details">Aprede a crear páginas web desde cero.
+Más de 4 horas de tutoriales para aprender hacer un proyecto web completo.</string>
 
     <string name="yes_message">SI</string>
     <string name="no_message">NO</string>

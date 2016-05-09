@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -24,6 +25,10 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
 
     String user = "testuser";
     String pass = "password";
+
+    GlobalVars GV = new GlobalVars();
+
+    OUT_st_sign_in OUT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -58,12 +63,12 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
             public void afterTextChanged(Editable s) {
                 if(!txtEmail.getText().toString().isEmpty()){
 
-                 if(!isValidEmail(txtEmail.getText().toString())){
-                      txtEmail.setError("Introduzca correo válido.");
+                    if(!isValidEmail(txtEmail.getText().toString())){
+                        txtEmail.setError("Introduzca correo válido.");
 
 
-                 }
-             }
+                    }
+                }
 
             }
         });
@@ -103,6 +108,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
 
                         AsyncT asyncT = new AsyncT();
 
+                        OUT = new OUT_st_sign_in();
 
                         try {
                             String str_result = asyncT.execute().get().toString();
@@ -113,11 +119,19 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
                         ws_static_variables wsvars;
                         wsvars = new ws_static_variables();
 
+                        GV.userEmail = OUT.getEmail(); //asyncT.getResponse().getEmail();
+                        GV.userName = OUT.getName();
+                        GV.userToken = OUT.getUser_token();
+                        Log.e("TEST::::", wsvars.getWs_sign_in_errorcode_value().toString());
+                        Log.w("TEST2::::::::::", wsvars.getWs_sign_in_errorcode_value().toString());
 
-                        if (asyncT.getResponse().getError() == 0 ) {
+
+
+                        if (asyncT.getResponse().getError() != wsvars.getWs_sign_in_errorcode_value() )
+                        {
                             Intent goMainScreen = new Intent(this, MainScreenActivity.class);
-                            finish();
                             startActivity(goMainScreen);
+                            finish();
 
 
                         }else{
@@ -205,4 +219,3 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
 
     }
 }
-

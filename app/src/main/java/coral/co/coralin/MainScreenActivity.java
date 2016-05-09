@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -24,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainScreenActivity extends AppCompatActivity
@@ -31,6 +33,9 @@ public class MainScreenActivity extends AppCompatActivity
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+    public static TextView userName, txtUserEmail;
+
+    GlobalVars GV = new GlobalVars();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,6 +49,15 @@ public class MainScreenActivity extends AppCompatActivity
 
         //Initializing NavigationView
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
+
+        assert navigationView != null;
+        View drawerHeader = navigationView.inflateHeaderView(R.layout.header);
+
+        txtUserEmail = (TextView) drawerHeader.findViewById(R.id.hdUserEmail);
+
+        String strUserEmailtext = GV.userEmail;
+
+        txtUserEmail.setText(strUserEmailtext);
 
         //Setting Navigation View Item Selected Listener to handle the item click of the navigation menu
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()

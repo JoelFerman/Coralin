@@ -70,7 +70,7 @@ public class EmailRegisterScreenActivity extends AppCompatActivity implements Vi
     @Override
     public void onBackPressed()
     {
-        Intent goBackPreRegister = new Intent(this, PreRegisterScreenActivity.class);
+        Intent goBackPreRegister = new Intent(this, PreLoginScreenActivity.class);
         finish();
         startActivity(goBackPreRegister);
     }
@@ -124,11 +124,11 @@ public class EmailRegisterScreenActivity extends AppCompatActivity implements Vi
 
 
                     }else{
-
+                        Toast.makeText(EmailRegisterScreenActivity.this, "Porfavor, verifique que todos los campos sean llenados.", Toast.LENGTH_SHORT).show();
                     }
 
                 }else{
-                    Toast.makeText(EmailRegisterScreenActivity.this, "Introduzca correo válido.", Toast.LENGTH_SHORT);
+                    Toast.makeText(EmailRegisterScreenActivity.this, "Introduzca un correo válido.", Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -204,7 +204,7 @@ public class EmailRegisterScreenActivity extends AppCompatActivity implements Vi
 
     }
 
-    public final static boolean isValidEmail(CharSequence target) {
+    public static boolean isValidEmail(CharSequence target) {
         return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
 }

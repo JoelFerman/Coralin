@@ -21,8 +21,8 @@
         android:src="@android:color/white" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:src="@drawable/ic_coral_pet"
             android:layout_centerInParent="true"/>
 

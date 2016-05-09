@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    android:background="@drawable/layer_card_background"
+    android:background="@drawable/border"
     android:layout_marginLeft="@dimen/activity_horizontal_margin"
     android:layout_marginRight="@dimen/activity_horizontal_margin">
 
@@ -13,7 +13,7 @@
         android:layout_height="64dp"
         android:layout_alignParentLeft="true"
         android:contentDescription="icon"
-        android:src="@drawable/ic_user_picture" />
+        android:src="@drawable/ic_profile_picture" />
 
     <!-- title -->
     <TextView
