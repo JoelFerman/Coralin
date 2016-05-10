@@ -18,7 +18,7 @@ import java.util.List;
 public class DownloadGame_RecyclerView_Adapter extends RecyclerView.Adapter<DownloadedGame_View_Holder> {
 
     GlobalVars GV = new GlobalVars();
-    String gameURL = "http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=1";
+    String gameURL = "http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=0"; //String gameURL = "http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=1";
     List<DownloadGameData> list = Collections.emptyList();
     Context context;
 
