@@ -33,7 +33,7 @@ public class MainScreenActivity extends AppCompatActivity
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
-    public static TextView userName, txtUserEmail;
+    public static TextView txtUserName, txtUserEmail;
 
     GlobalVars GV = new GlobalVars();
 
@@ -53,19 +53,34 @@ public class MainScreenActivity extends AppCompatActivity
         assert navigationView != null;
         View drawerHeader = navigationView.inflateHeaderView(R.layout.header);
 
-        Intent getUserInfo = getIntent();
-        Bundle bundle = getUserInfo.getExtras();
+//        Intent getUserInfo = getIntent();
+//        Bundle bundle = getUserInfo.getExtras();
+//
+//        if (bundle != null)
+//        {
+//            String email = (String) bundle.get("intUserEmail");
+//            GV.userEmail = email;
+//
+//            String name = (String) bundle.get("intUserName");
+//            GV.userName = name;
+//
+//            String token = (String) bundle.get("intUserToken");
+//            GV.userToken = token;
+//
+//            txtUserEmail = (TextView) drawerHeader.findViewById(R.id.hdUserEmail);
+//            txtUserEmail.setText(GV.userEmail);
+//
+//            txtUserName = (TextView) drawerHeader.findViewById(R.id.hdUserName);
+//            txtUserName.setText(GV.userName);
+//        }
 
-        if (bundle != null)
-        {
-            txtUserEmail = (TextView) drawerHeader.findViewById(R.id.hdUserEmail);
-            String j = (String) bundle.get("intUserEmail");
-            txtUserEmail.setText(j);
-        }
+        txtUserEmail = (TextView) drawerHeader.findViewById(R.id.hdUserEmail);
+        txtUserEmail.setText(GV.userEmail);
 
+        txtUserName = (TextView) drawerHeader.findViewById(R.id.hdUserName);
+        txtUserName.setText(GV.userName);
 
-
-        String strUserEmailtext = GV.userEmail;
+//        String strUserEmailtext = GV.userEmail;
 
         //Setting Navigation View Item Selected Listener to handle the item click of the navigation menu
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()

@@ -8,7 +8,9 @@ public class GameScreenActivity extends AppCompatActivity
 {
     private WebView wbGame;
 
-    String gameURL = "http://coral.rosalilastudio.com/game.html?user_email=joelferman@hotmail.com&user_token=6d_jMoVH1vvzzxvh38CU&current_level=1";//"http://beta.html5test.com/";
+    GlobalVars GV = new GlobalVars();
+
+    String gameURL = "http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=0";//"http://beta.html5test.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

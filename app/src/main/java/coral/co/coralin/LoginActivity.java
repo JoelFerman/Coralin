@@ -122,18 +122,14 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
                         GV.userEmail = OUT.getEmail(); //asyncT.getResponse().getEmail();
                         GV.userName = OUT.getName();
                         GV.userToken = OUT.getUser_token();
-//                        Log.e("TEST000::::", OUT.getError().toString());
-//                        Log.e("Email::::", GV.userEmail);
-//                        Log.e("TEST::::", wsvars.getWs_sign_in_errorcode_value().toString());
-//                        Log.w("TEST2::::::::::", wsvars.getWs_sign_in_errorcode_value().toString());
-
-
 
                         if (asyncT.getResponse().getError() == 0)
                         {
                             Intent goMainScreen = new Intent(this, MainScreenActivity.class);
-                            goMainScreen.putExtra("intUserEmail", OUT.getEmail());
-                            Toast.makeText(this, OUT.getEmail(), Toast.LENGTH_SHORT).show();
+//                            goMainScreen.putExtra("intUserEmail", OUT.getEmail());
+//                            goMainScreen.putExtra("intUserName", OUT.getName());
+//                            goMainScreen.putExtra("intUserToken", OUT.getUser_token());
+//                            Toast.makeText(this, GV.userEmail, Toast.LENGTH_SHORT).show();
                             startActivity(goMainScreen);
                             finish();
 

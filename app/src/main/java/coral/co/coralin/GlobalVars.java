@@ -8,9 +8,9 @@ import android.app.Application;
 public class GlobalVars extends Application
 {
 // USER VARS
-    public String userEmail;
-    public String userName;
-    public String userToken;
+    public static String userEmail;
+    public static String userName;
+    public static String userToken;
 
 // SCREEN CODES
     public String screenCode = "";

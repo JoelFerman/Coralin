@@ -53,7 +53,7 @@ public class LessonDetailsActivity extends YouTubeBaseActivity implements YouTub
         switch (v.getId())
         {
             case R.id.btnLessonDetailPlay:
-                String gameURL = "http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=1";//"http://beta.html5test.com/";
+                String gameURL = "http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=0";  //"http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=0";//"http://beta.html5test.com/";
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(gameURL));
                 startActivity(browserIntent);
 //                Intent goLessonPlay = new Intent(this, GameScreenActivity.class);
