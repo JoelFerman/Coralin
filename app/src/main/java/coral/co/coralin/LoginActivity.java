@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -64,10 +65,54 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
                 if(!txtEmail.getText().toString().isEmpty()){
 
                     if(!isValidEmail(txtEmail.getText().toString())){
-                        txtEmail.setError("Introduzca correo válido.");
+                        TextInputLayout inputLayout = (TextInputLayout) findViewById(R.id.floatingLabelEmail);
+                        inputLayout.setError("Introduzca una dirección de correo eelctrónico válida."); // show error
+                        //inputLayout.setError(null); // hide error
 
+
+                    }else{
+                        TextInputLayout inputLayout = (TextInputLayout) findViewById(R.id.floatingLabelEmail);
+                        inputLayout.setError(null); // hide error
 
                     }
+                }else{
+                    TextInputLayout inputLayout = (TextInputLayout) findViewById(R.id.floatingLabelEmail);
+                    inputLayout.setError(null); // hide error
+                }
+
+            }
+        });
+
+        txtPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!txtPassword.getText().toString().isEmpty()){
+
+                    if(txtPassword.getText().toString().length() < 8){
+                        TextInputLayout inputLayout = (TextInputLayout) findViewById(R.id.floatingLabelPassword);
+                        inputLayout.setError("Su contraseña debe contener un mínimo de 8 caracteres."); // show error
+                        //inputLayout.setError(null); // hide error
+
+
+                    }else{
+                        TextInputLayout inputLayout = (TextInputLayout) findViewById(R.id.floatingLabelPassword);
+                        inputLayout.setError(null); // hide error
+
+                    }
+                }else{
+                    TextInputLayout inputLayout = (TextInputLayout) findViewById(R.id.floatingLabelPassword);
+                    inputLayout.setError(null); // hide error floatingLabelPassword
                 }
 
             }
