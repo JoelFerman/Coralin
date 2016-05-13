@@ -101,7 +101,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener
 
                     if(txtPassword.getText().toString().length() < 8){
                         TextInputLayout inputLayout = (TextInputLayout) findViewById(R.id.floatingLabelPassword);
-                        inputLayout.setError("Su contraseña debe contener un mínimo de 8 carácteres."); // show error
+                        inputLayout.setError("Su contraseña debe contener un mínimo de 8 caracteres."); // show error
                         //inputLayout.setError(null); // hide error
 
 
