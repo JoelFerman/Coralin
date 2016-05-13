@@ -37,9 +37,6 @@ public class LessonDetailsActivity extends YouTubeBaseActivity implements YouTub
         setContentView(R.layout.activity_lesson_details);
 
         btnLessonDetailPlay = (Button)findViewById(R.id.btnLessonDetailPlay);
-//        lessonWebView = (WebView)findViewById(R.id.lessonWebView);
-//        lessonWebView.getSettings().setJavaScriptEnabled(true);
-//        lessonWebView.loadUrl("https://www.youtube.com/watch?v=gzT9oCWyJfk");
 
         lesson_video = (YouTubePlayerView) findViewById(R.id.lesson_video);
         lesson_video.initialize(YouTubeConfig.YOUTUBE_API_KEY, this);
@@ -53,11 +50,9 @@ public class LessonDetailsActivity extends YouTubeBaseActivity implements YouTub
         switch (v.getId())
         {
             case R.id.btnLessonDetailPlay:
-                String gameURL = "http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=0";  //"http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=0";//"http://beta.html5test.com/";
+                String gameURL = "http://coral.rosalilastudio.com/game.html?user_email="+GV.userEmail+"&user_token="+GV.userToken+"&current_level=0";
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(gameURL));
                 startActivity(browserIntent);
-//                Intent goLessonPlay = new Intent(this, GameScreenActivity.class);
-//                startActivity(goLessonPlay);
                 break;
 
             default:

@@ -1,11 +1,14 @@
 package coral.co.coralin;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.Collections;
 import java.util.List;
@@ -15,6 +18,7 @@ import java.util.List;
  */
 public class OtherResources_RecyclerView_Adapter extends RecyclerView.Adapter<OtherResources_View_Holder> {
 
+    String otherResourceURL = "http://www.google.com";
     List<OtherResourcesData> list = Collections.emptyList();
     Context context;
 
@@ -37,10 +41,17 @@ public class OtherResources_RecyclerView_Adapter extends RecyclerView.Adapter<Ot
 
         //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
         holder.txtOtherResources.setText(list.get(position).title);
-        holder.txtOtherResources.setOnClickListener(new View.OnClickListener() {
+        holder.otherResourcesCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+//                try {
+//                    Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(otherResourceURL));
+//                    context.startActivity(myIntent);
+//                } catch (ActivityNotFoundException e) {
+//                    Toast.makeText(context, "No application can handle this request."
+//                            + " Please install a web browser",  Toast.LENGTH_LONG).show();
+//                    e.printStackTrace();
+//                }
             }
         });
     }

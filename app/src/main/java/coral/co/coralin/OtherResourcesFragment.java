@@ -41,8 +41,7 @@ public class OtherResourcesFragment extends Fragment
 
         List<OtherResourcesData> data = new ArrayList<>();
 
-        data.add(new OtherResourcesData("https://studio.code.org/s/mc/stage/1/puzzle/1"));
-        data.add(new OtherResourcesData("https://studio.code.org/s/starwarsblocks/stage/1/puzzle/1"));
+        data.add(new OtherResourcesData("https://www.google.com"));
 
         return data;
     }
